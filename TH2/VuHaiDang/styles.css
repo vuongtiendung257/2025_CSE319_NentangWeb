@@ -24,21 +24,24 @@ nav ul li a {
   font-weight: 700;
   text-transform: uppercase;
 }
-
 /* Hero Section Styles */
 #hero {
   position: relative;
-  background: url('images/hero-bg.jpg') no-repeat center center/cover;
+  background: url('images/places/ocean.jpg') no-repeat center center/cover;
   height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 5px solid #FFD700;
+  border-bottom: 5px solid #FFD700;
+  border-left: 5px solid #FF69B4;
+  border-right: 5px solid #FF69B4;
 }
 
 #hero-content {
   text-align: center;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: 10px;
 }
@@ -66,7 +69,7 @@ nav ul li a {
 #highlights {
   padding: 40px 20px;
   text-align: center;
-  background-color: #fff;
+  background-color: #CDF4F1;
 }
 
 #highlights h2 {
