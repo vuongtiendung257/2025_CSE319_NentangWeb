@@ -1,0 +1,117 @@
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4b0049;
+  color: #fff;
+  padding: 20px;
+}
+
+#page-logo a {
+  font-family: 'Oleo Script', cursive;
+  font-size: 24px;
+  color: #ffd700;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #ffd700;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Hero Section Styles */
+#hero {
+  position: relative;
+  background: url('images/hero-bg.jpg') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-content {
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#hero-content h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#hero-content a {
+  background-color: #ffd700;
+  color: #4b0049;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+/* Highlights Section Styles */
+#highlights {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#highlights h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#destinations {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.destination {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+}
+
+.destination img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.destination p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #4b0049;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer ul li a img {
+  width: 24px;
+  height: 24px;
+}
