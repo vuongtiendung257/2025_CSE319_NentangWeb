@@ -3,34 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vu Haidang B4</title>
-    <style>
-        .contact-form {
-            background-color: #fcfcfc;
-            border: 10px solid #a7cfc5;
-            padding-bottom: 80%;
-            margin-left: 20%;
-            margin-right: 20%;
-            box-shadow: 0 0 10px rgba(235, 4, 4, 0.1);
-        }
-        .inside-form {
-            margin: 5% 2%;
-        }
-        .info{
-
-        }
-    </style>
+    <title>Employee Form</title>
+    <link rel="stylesheet" href="vuhaidang_B4.css">
 </head>
 <body>
-    <div class="contact-form">
-        <div class = "inside-form">
-            <form>
-                <label style="font-size:x-large;font-family: Arial, Helvetica, sans-serif;font-weight: bold;">Basic Info</label><hr>
-            </form>
-            <div class = "info">
-                
+    <form id="employeeForm">
+        <fieldset>
+            <legend><strong style="font-size: 1.5em;">Basic Info</strong></legend>
+            <div>
+                <label><strong>Employee ID:</strong>
+                    <span id="employeeID" style="font-weight: normal;">9</span>
+                </label>
             </div>
-        </div>
-    </div>
+
+            <div>
+                <label for="lastName"><strong>Last Name:</strong></label>
+                <input type="text" id="lastName" name="lastName" value="Dodsworth">
+            </div>
+
+            <div>
+                <label for="firstName"><strong>First Name:</strong></label>
+                <input type="text" id="firstName" name="firstName" value="Anne">
+            </div>
+
+            <div>
+                <label><strong>Gender:</strong></label>
+                <input type="radio" id="genderMale" name="gender" value="male">
+                <label for="genderMale">Male</label>
+                <input type="radio" id="genderFemale" name="gender" value="female">
+                <label for="genderFemale">Female</label>
+                <input type="radio" id="genderXXX" name="gender" value="xxx">
+                <label for="genderXXX">XXX</label>
+                <input type="radio" id="genderZZZ" name="gender" value="zzz" checked>
+                <label for="genderZZZ">ZZZ</label>
+            </div>
+
+            <div>
+                <label for="title"><strong>Title:</strong></label>
+                <input type="text" id="title" name="title" value="Sales Representative">
+            </div>
+
+            <div>
+                <label for="suffix"><strong>Suffix:</strong></label>
+                <input type="text" id="suffix" name="suffix" value="Ms.">
+            </div>
+
+            <div>
+                <label for="birthDate"><strong>BirthDate:</strong></label>
+                <input type="datetime-local" id="birthDate" name="birthDate" value="1969-07-02T00:00:00">
+            </div>
+
+            <div>
+                <label for="hireDate"><strong>HireDate:</strong></label>
+                <input type="datetime-local" id="hireDate" name="hireDate" value="1994-11-15T00:00:00">
+            </div>
+
+            <div>
+                <label for="reportsTo"><strong>Reports To:</strong></label>
+                <select id="reportsTo" name="reportsTo">
+                    <option value="Buchanan">Buchanan</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong style="font-size: 1.5em;">Contact Info</strong></legend>
+            <div>
+                <label for="email"><strong>Email:</strong></label>
+                <input type="email" id="email" name="email" value="name@example.com">
+            </div>
+
+            <div>
+                <label for="address"><strong>Address:</strong></label>
+                <input type="text" id="address" name="address" value="7 Houndstooth Rd.">
+            </div>
+
+            <div>
+                <label for="city"><strong>City:</strong></label>
+                <input type="text" id="city" name="city" value="London">
+            </div>
+
+            <div>
+                <label for="postalCode"><strong>Postal Code:</strong></label>
+                <input type="text" id="postalCode" name="postalCode" value="WG2 7LT">
+            </div>
+
+            <div>
+                <label for="country"><strong>Country:</strong></label>
+                <select id="country" name="country">
+                    <option value="Russian Federation">Russian Federation</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="usHomePhone"><strong>US Home Phone:</strong></label>
+                <input type="tel" id="usHomePhone" name="usHomePhone" value="(234)234-2342">
+            </div>
+
+            <div>
+                <label for="photo"><strong>Photo:</strong></label>
+                <input type="text" id="photo" name="photo" value="EmplID9.bmp">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong style="font-size: 1.5em;">Optional Info</strong></legend>
+            <div>
+                <label for="notes"><strong>Notes:</strong></label>
+                <textarea id="notes" name="notes">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.ZZZ</textarea>
+            </div>
+
+            <div>
+                <label><strong>Preferred Shift:</strong></label>
+                <input type="checkbox" id="regularShift" name="preferredShift" value="regular">
+                <label for="regularShift">Regular</label>
+                <input type="checkbox" id="graveyardShift" name="preferredShift" value="graveyard" checked>
+                <label for="graveyardShift">Graveyard</label>
+            </div>
+
+            <div>
+                <label for="active"><strong>Active?</strong></label>
+                <input type="checkbox" id="active" name="active" checked>
+            </div>
+
+            <div>
+                <label for="captcha"><strong>Are you human?</strong></label>
+                <input type="text" id="captcha" name="captcha" value="TIDAWO">
+            </div>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+    </form>
 </body>
 </html>
