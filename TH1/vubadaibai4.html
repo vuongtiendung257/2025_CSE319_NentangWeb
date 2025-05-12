@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .box-shadow {
+            box-shadow:  4px 4px 8px gray; 
+            padding: 20px;
+            margin: 200px; 
+            border-radius: 12px;
+        }
+        hr 
+        {
+            margin: 0px 0.1px 3px; 
+        }
+
+        .form-section h3 {
+            margin-top: 0;
+        }
+        .row {
+            margin-bottom: 10px;
+            overflow: hidden; /* Clear floats */
+        }
+        .label-gender
+        {
+            display: flex;
+            width: 40%;
+            margin-right: 10px;
+        }
+        .label {
+            float: left;
+            width: 40%;
+            margin-right: 10px;
+        }
+        .value {
+            float: left;
+            width: 55%;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        textarea {
+            height: 100px;
+        }
+        .buttons {
+            margin-top: 10px;
+            text-align: right;
+        }
+        button {
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-shadow">
+        <h3>Basic Info</h3>
+        <hr> 
+        <div class="row">
+            <div class="label">Employee ID</div>
+            <div class="value"><input type="text" value="9"></div>
+        </div>
+        <div class="row">
+            <div class="label">Last Name</div>
+            <div class="value"><input type="text" value="Dodsworth"></div>
+        </div>
+        <div class="row">
+            <div class="label">First Name</div>
+            <div class="value"><input type="text" value="Anne"></div>
+        </div>
+        <div class="row">
+            <div class="label">Gender</div>
+            <div class="value">
+                <label>
+                    <input type="radio" name = "gender" value = "Male"> Male 
+                </label>
+                <label>
+                   <input type="radio" name = "gender" value = "Male"> Female 
+                </label>
+                <label>
+                   <input type="radio" name = "gender" value = "Male"> XXX 
+                </label>
+                <label>
+                   <input type="radio" name = "gender" value = "Male"> ZZZ 
+                </label>
+        </div>
+        </div>
+        <div class="row">
+            <div class="label">Title</div>
+            <div class="value"><input type="text" value="Sales Representative"></div>
+        </div>
+        <div class="row">
+            <div class="label">Suffix</div>
+            <div class="value"><input type="text" value="Ms."></div>
+        </div>
+        <div class="row">
+            <div class="label">BirthDate</div>
+            <div class="value"><input type="text" value="1969-07-02 00:00:00"></div>
+        </div>
+        <div class="row">
+            <div class="label">HireDate</div>
+            <div class="value"><input type="text" value="1994-11-15 00:00:00"></div>
+        </div>
+        <div class="row">
+            <div class="label">SSN (if applicable)</div>
+            <div class="value"><input type="text"></div>
+        </div>
+    
+
+
+      
+        <div class="row">
+            <div class="label">Reports To</div>
+            <div class = "value"> 
+            <select> 
+                <option>Buchana </option>
+            </select>
+            </div>
+        </div>
+    
+
+    
+        <h3>Contact Info</h3>
+        <hr> 
+        <div class="row">
+            <div class="label">Email</div>
+            <div class="value"><input type="email" placeholder="name@example.com"></div>
+        </div>
+        <div class="row">
+            <div class="label">Address</div>
+            <div class="value"><input type="text" value="7 Houndstooth Rd."></div>
+        </div>
+        <div class="row">
+            <div class="label">City</div>
+            <div class="value"><input type="text" value="London"></div>
+        </div>
+        <div class="row">
+            <div class="label">Region</div>
+            <div class="value"><input type="text" value=""></div>
+        </div>
+        <div class="row">
+            <div class="label">Postal Code</div>
+            <div class="value"><input type="text" value="WG2 7LT"></div>
+        </div>
+        <div class="row">
+            <div class="label">Country</div>
+            <div class="value">
+                <select>
+                    <option> Russian Federation </option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="label">US Home Phone</div>
+            <div class="value"><input type="text" value="(324)324-3242"></div>
+        </div>
+        <div class="row">
+            <div class="label">Photo</div>
+            <div class="value"><input type="text" value="EmpID.bmp"></div>
+        </div>
+   
+
+    
+        <h3>Optional Info</h3>
+        <hr>
+        <div class="row">
+            <div class="label">Notes</div>
+            <div class="value">
+                <textarea>
+Anne has a BA degree in English from St. Lawrence College.
+She is fluent in French and German ZZZ
+                </textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="label">Preferred Shift</div>
+            <div class="value">
+                <input type="checkbox" id="shift1" name="shift1" value="Regular">
+                  <label for="shift"> Regular</label><br>
+                  <input type="checkbox" id="shift2" name="shift2" value="Gravy Yard">
+                  <label for="shift2"> Gravy Yard </label><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="label">Active?</div>
+            <div class="value"><input type="checkbox" checked></div>
+        </div>
+        <div class="row">
+            <div class="label">Are you human?</div>
+            <div class="value"><input type="text" value="TIĐAWO"></div>
+        </div>
+    <hr>
+
+    <div class="buttons">
+        <button>Submit</button>
+        <button>Cancel</button>
+    </div>
+    </div>
+</body>
+</html>
