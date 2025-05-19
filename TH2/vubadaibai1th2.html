@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Form bài 1 thực hành 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+     justify-content: center;
+      align-items: center;
+      display: flex;
+      background-color: #ffffff;
+    }
+    .form-container {
+      border: 1px solid #000;
+      padding: 30px;
+      max-width: 600px;
+      margin-top: 10px;
+    }
+
+    .form-container h2 {
+      font-size: 15px;
+      margin-bottom: 20px;
+      width : 80800px;
+      height :20px;
+     
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .row {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .row input {
+      flex: 1;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .actions button {
+      padding: 10px 15px;
+      background-color: #70ccf0;
+      border: 1px solid #058ab6;
+      color: white;
+      cursor: pointer;
+      font-size:12px;
+      font-weight: bold;
+    }
+
+    .actions span {
+      font-size: 13px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <div class="form-container">
+    <h2>Get in touch with us by filling contact form below</h2>
+    <form>
+      <div class="row">
+        <input type="text" placeholder="* Enter your full name" required>
+        <input type="email" placeholder="* Enter your email address" required>
+      </div>
+      <input type="text" placeholder="Enter your subject">
+      <textarea placeholder="* Your message here..." required></textarea>
+      <div class="actions">
+        <button type="submit">Send message</button>
+        <!-- span để viết chữ nhỏ dưới góc phải màn hìnhhình-->
+        <span>* Please fill all required form field, thanks!</span>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
