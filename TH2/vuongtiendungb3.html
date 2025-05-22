@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+            opacity: 0.4;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            border: 3px solid turquoise;
+            border-top: none;
+            background-color: white;
+            position: relative;
+        }
+
+        .vertical-line-left {
+            position: absolute;
+            left: -3px;
+            top: -100px;
+            height: calc(100% + 100px);
+            width: 3px;
+            background-color: turquoise;
+        }
+        .vertical-line-right {
+            position: absolute;
+            right: -3px;
+            top: -100px;
+            height: calc(100% + 100px);
+            width: 3px;
+            background-color: turquoise;
+        }
+
+        .box-shadow {
+            padding: 20px;
+            width: 300px;
+            height: 430px;
+            box-shadow: 0 0 28px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .h1 {
+            font-family: monospace;
+            text-align: center;
+            font-weight: lighter;
+            font-size: 25px;
+        }
+        .h2 {
+            font-family: monospace;
+            text-align: center;
+            font-weight: lighter;
+            font-size: 22px;
+        }
+
+        .text-content {
+            max-width: 400px;
+            font-family: cursive;
+            line-height: 1.6;
+        }
+
+        .author {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .links a {
+            color: blue;
+            text-decoration: underline;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="h1">Wireframe Connects the Underlying <br>Conceptual Structure</div>
+    <br><br>
+    <div class="container">
+        <div class="vertical-line-left"></div>
+        <div class="vertical-line-right"></div>
+        <div class="box-shadow">
+            <div class="h2">Wireframe Connects the Underlying Conceptual Structure</div>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts far from the countries Vokalia and Consonantia, there live the blind texts..</p>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+            <p class="author">Louie Jie Mahusay</p>
+            <p class="links"><a href="#">CEO</a>, <a href="#">Founder</a></p>
+        </div>
+        <div class="text-content">
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p><b>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts far from the countries Vokalia and Consonantia, there live the blind texts.</b></p>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        </div>
+    </div>
+</body>
+</html>
