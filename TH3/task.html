@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản Lý Công Việc</title>
+  <link rel="stylesheet" href="task.css">
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .todo-input {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    #new-task {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    #add-task {
+      padding: 10px 15px;
+      background-color: #b8481c;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    #add-task:hover {
+      background-color: #218838;
+    }
+
+    ul#task-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul#task-list li {
+      background: white;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-left: 5px solid #28a745;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Manage Task</h1>
+  
+    <div class="input-group">
+      <input type="text" id="new-task" placeholder="Input new task here..." />
+      <button onclick="addTask()">Add task</button>
+    </div>
+  
+    <div class="main-content">
+      <!-- Cột trái: bộ lọc -->
+      <div class="filter-container">
+        <button class="filter-btn" onclick="filterTasks('all')">Tất cả</button>
+        <button class="filter-btn" onclick="filterTasks('active')">Chưa hoàn thành</button>
+        <button class="filter-btn" onclick="filterTasks('done')">Đã hoàn thành</button>
+      </div>
+  
+      <!-- Cột phải: danh sách công việc -->
+      <ul id="task-list"></ul>
+    </div>
+  </div>
+  
+  <script src="task.js"> </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f0ed;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: greenyellow;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  button:hover {
+    background-color: #c20d0d;
+  }
+  
+  #add-task {
+    background-color: #a4502a;
+    color: white;
+    border-radius: 0 4px 4px 0;
+  }
+  
+  #task-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 20px auto 0;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-left: 5px solid green;
+    transition: background-color 0.3s;
+  }
+  
+  .task-item:hover {
+    background-color:rgb(62, 129, 156)
+  }
+  
+  .task-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .task-text.done {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  .delete-btn {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+  
+  .task-date {
+    font-size: 12px;
+    margin-left: 10px;
+    color: #666;
+  }
+  
+  button.filter-btn {
+    margin: 10px 5px 0;
+    padding: 6px 12px;
+    background-color: rgb(47, 160, 189);
+    border-radius: 5px;
+  }
+  button.filter-btn:hover {
+    background-color: rgb(133, 89, 113);
+  
+  
+  .filter-container {
+    text-align: left;
+    max-width: 500px;
+    margin-top: 10px;
+  }
+  
+  .main-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .filter-btn {
+    padding: 8px 12px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  
+  .filter-btn:hover {
+    background-color: #ccc;
+  }
+  
+  
+  }
