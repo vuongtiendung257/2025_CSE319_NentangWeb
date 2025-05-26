@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bài thực hành 3</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-section {
+      display: flex;
+      gap: 10px;
+    }
+
+    #taskInput {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    #addTaskBtn {
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #addTaskBtn:hover {
+      background-color: #0056b3;
+    }
+
+    ul#taskList {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+      margin-bottom: 10px;
+      background-color: #e9ecef;
+      border-radius: 5px;
+    }
+
+    .task-item.completed span {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .task-buttons button {
+      margin-left: 5px;
+      padding: 4px 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .task-buttons .delete-btn {
+      background-color: red;
+      color: white;
+    }
+
+    .task-buttons .delete-btn:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>&#x1F4CB Quản Lý Công Việc</h1>
+    <div class="input-section">
+      <input type="text" id="taskInput" placeholder="Nhập công việc mới..." />
+      <button id="addTaskBtn">Thêm công việc</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    let tasks = [];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadTasksFromLocalStorage();
+      document.getElementById("addTaskBtn").addEventListener("click", addTask);
+    });
+
+    function addTask() {
+      const input = document.getElementById("taskInput");
+      const taskText = input.value.trim();
+
+      if (taskText === "") {
+        alert("Vui lòng nhập nội dung công việc!");
+        return;
+      }
+
+      const newTask = {
+        id: Date.now(),
+        text: taskText,
+        isDone: false
+      };
+
+      tasks.push(newTask);
+      input.value = "";
+      saveTasksToLocalStorage();
+      renderTasks();
+    }
+
+    function renderTasks() {
+      const taskList = document.getElementById("taskList");
+      taskList.innerHTML = "";
+
+      tasks.forEach((task) => {
+        const li = document.createElement("li");
+        li.className = "task-item" + (task.isDone ? " completed" : "");
+
+        const span = document.createElement("span");
+        span.textContent = task.text;
+        span.style.cursor = "pointer";
+        span.addEventListener("click", () => toggleTask(task.id));
+
+        const buttonsDiv = document.createElement("div");
+        buttonsDiv.className = "task-buttons";
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Xóa";
+        deleteBtn.className = "delete-btn";
+        deleteBtn.addEventListener("click", () => deleteTask(task.id));
+
+        buttonsDiv.appendChild(deleteBtn);
+
+        li.appendChild(span);
+        li.appendChild(buttonsDiv);
+
+        taskList.appendChild(li);
+      });
+    }
+
+    function toggleTask(id) {
+      tasks = tasks.map(task =>
+        task.id === id ? { ...task, isDone: !task.isDone } : task
+      );
+      saveTasksToLocalStorage();
+      renderTasks();
+    }
+
+    function deleteTask(id) {
+      tasks = tasks.filter(task => task.id !== id);
+      saveTasksToLocalStorage();
+      renderTasks();
+    }
+
+    function saveTasksToLocalStorage() {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+
+    function loadTasksFromLocalStorage() {
+      const storedTasks = localStorage.getItem("tasks");
+      if (storedTasks) {
+        tasks = JSON.parse(storedTasks);
+      }
+      renderTasks();
+    }
+  </script>
+</body>
+</html>
