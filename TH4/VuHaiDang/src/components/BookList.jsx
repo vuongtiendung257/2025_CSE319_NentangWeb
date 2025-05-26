@@ -14,7 +14,7 @@ function BookList({ books, onEdit, onDelete }) {
                 <strong>{book.title}</strong> - {book.author} ({book.year})
               </span>
               <span>
-                <button type="button" onClick={() => onEdit(book)}>Sửa</button>
+                <button type="button" onClick={() => onss(book)}>Sửa</button>
                 <button type="button" onClick={() => onDelete(book.id)}>Xóa</button>
               </span>
             </li>
