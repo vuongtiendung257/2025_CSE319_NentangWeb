@@ -7,8 +7,11 @@ body {
 }
 
 .container {
-  max-width: 1000px;
-  margin: 500px;
+  max-width: 600px;
+  width: 100%;
+  margin-left: 400px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   background: white;
   padding: 30px;
   border-radius: 12px;
@@ -32,7 +35,7 @@ label {
 
 input {
   padding: 6px 5px;
-  width: calc(400px);
+  width: calc(580px);
   height: calc(20px);
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -40,6 +43,7 @@ input {
   color: #333;
   font-weight: bold;
 }
+
 
 button {
   margin-top: 10px;
@@ -58,6 +62,7 @@ button:hover {
 
 ul {
   list-style-type: none;
+  width: 100%;
   padding: 0;
 }
 
